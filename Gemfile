@@ -29,3 +29,7 @@ gem 'jquery-rails'
 gem 'paper_trail'
 gem 'formtastic'
 gem 'devise'
+
+group :development do
+  gem 'ruby-debug'
+end
