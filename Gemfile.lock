@@ -50,12 +50,6 @@ GEM
       actionpack (>= 2.3.7)
       activesupport (>= 2.3.7)
       i18n (~> 0.4)
-    gmail (0.4.0)
-      gmail_xoauth (>= 0.3.0)
-      mail (>= 2.2.1)
-      mime (>= 0.1)
-    gmail_xoauth (0.3.0)
-      oauth (>= 0.3.6)
     hike (1.0.0)
     i18n (0.6.0)
     jquery-rails (1.0.10)
@@ -67,10 +61,8 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    mime (0.1)
     mime-types (1.16)
     multi_json (1.0.3)
-    oauth (0.4.4)
     orm_adapter (0.0.5)
     paper_trail (2.2.4)
       rails (~> 3)
@@ -133,7 +125,6 @@ DEPENDENCIES
   coffee-script
   devise
   formtastic
-  gmail
   jquery-rails
   json
   paper_trail

@@ -10,7 +10,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110614143715) do
+ActiveRecord::Schema.define(:version => 20110614161450) do
+
+  create_table "clue_solutions", :force => true do |t|
+    t.integer  "clue_id",     :null => false
+    t.integer  "solution_id", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "clue_solutions", ["clue_id", "solution_id"], :name => "index_clue_solutions_on_clue_id_and_solution_id"
+  add_index "clue_solutions", ["clue_id"], :name => "index_clue_solutions_on_clue_id"
+  add_index "clue_solutions", ["solution_id"], :name => "index_clue_solutions_on_solution_id"
 
   create_table "clues", :force => true do |t|
     t.integer  "question_id", :null => false

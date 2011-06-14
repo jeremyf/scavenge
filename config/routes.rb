@@ -9,5 +9,5 @@ Scavenge::Application.routes.draw do
 
   resources :solutions
 
-  root :to => "questions#index"
+  root :to => "home#index"
 end
