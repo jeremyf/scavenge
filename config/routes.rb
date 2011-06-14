@@ -1,4 +1,6 @@
 Scavenge::Application.routes.draw do
+  devise_for :users
+
   resources :teams
 
   resources :clues
@@ -6,4 +8,6 @@ Scavenge::Application.routes.draw do
   resources :questions
 
   resources :solutions
+
+  root :to => "questions#index"
 end
