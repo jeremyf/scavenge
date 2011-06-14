@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  question_id: 1
+  team_id: 1
+  state: MyString
+
+two:
+  question_id: 1
+  team_id: 1
+  state: MyString

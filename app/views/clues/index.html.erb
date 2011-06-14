@@ -1,0 +1,29 @@
+<h1>Listing clues</h1>
+
+<table>
+  <tr>
+    <th>Question</th>
+    <th>Point cost</th>
+    <th>Name</th>
+    <th>Text</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @clues.each do |clue| %>
+  <tr>
+    <td><%= clue.question_id %></td>
+    <td><%= clue.point_cost %></td>
+    <td><%= clue.name %></td>
+    <td><%= clue.text %></td>
+    <td><%= link_to 'Show', clue %></td>
+    <td><%= link_to 'Edit', edit_clue_path(clue) %></td>
+    <td><%= link_to 'Destroy', clue, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Clue', new_clue_path %>

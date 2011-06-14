@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  scavenger_hunt_id: 1
+  points_available: 1
+  answer: MyText
+  name: MyString
+
+two:
+  scavenger_hunt_id: 1
+  points_available: 1
+  answer: MyText
+  name: MyString

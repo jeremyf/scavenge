@@ -24,3 +24,8 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug'
 
+# gem 'paperclip', '~> 2.3'
+
+gem 'paper_trail'
+gem 'formtastic'
+gem 'devise'
