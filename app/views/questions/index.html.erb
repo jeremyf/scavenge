@@ -13,7 +13,7 @@
 <% @questions.each do |question| %>
   <tr>
     <td><%= question.name %></td>
-    <td><%= question.points_available %></td>
+    <td><%= question.possible_points %></td>
     <td><%= question.answer %></td>
     <td><%= link_to 'Show', question %></td>
     <td><%= link_to 'Edit', edit_question_path(question) %></td>

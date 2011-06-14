@@ -1,7 +1,7 @@
 class CreateQuestions < ActiveRecord::Migration
   def change
     create_table :questions do |t|
-      t.integer :points_available, :null => false
+      t.integer :possible_points, :null => false
       t.text :answer
       t.string :name, :null => false
 

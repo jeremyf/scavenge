@@ -1,13 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
 
 one:
-  scavenger_hunt_id: 1
-  points_available: 1
+  possible_points: 10
   answer: MyText
-  name: MyString
+  name: Question Number 1
 
 two:
-  scavenger_hunt_id: 1
-  points_available: 1
+  possible_points: 10
   answer: MyText
-  name: MyString
+  name: Question Number 2

@@ -1,11 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
 
 one:
-  question_id: 1
+  id: 1
+  question: one
   team_id: 1
-  state: MyString
+  state: Solved
 
 two:
-  question_id: 1
+  id: 2
+  question: two
   team_id: 1
-  state: MyString
+  state: Solved

@@ -12,17 +12,6 @@
 
 ActiveRecord::Schema.define(:version => 20110614161450) do
 
-  create_table "clue_solutions", :force => true do |t|
-    t.integer  "clue_id",     :null => false
-    t.integer  "solution_id", :null => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "clue_solutions", ["clue_id", "solution_id"], :name => "index_clue_solutions_on_clue_id_and_solution_id"
-  add_index "clue_solutions", ["clue_id"], :name => "index_clue_solutions_on_clue_id"
-  add_index "clue_solutions", ["solution_id"], :name => "index_clue_solutions_on_solution_id"
-
   create_table "clues", :force => true do |t|
     t.integer  "question_id", :null => false
     t.integer  "point_cost",  :null => false
@@ -34,10 +23,21 @@ ActiveRecord::Schema.define(:version => 20110614161450) do
 
   add_index "clues", ["question_id"], :name => "index_clues_on_question_id"
 
+  create_table "clues_solutions", :id => false, :force => true do |t|
+    t.integer  "clue_id",     :null => false
+    t.integer  "solution_id", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "clues_solutions", ["clue_id", "solution_id"], :name => "index_clues_solutions_on_clue_id_and_solution_id", :unique => true
+  add_index "clues_solutions", ["clue_id"], :name => "index_clues_solutions_on_clue_id"
+  add_index "clues_solutions", ["solution_id"], :name => "index_clues_solutions_on_solution_id"
+
   create_table "questions", :force => true do |t|
-    t.integer  "points_available", :null => false
+    t.integer  "possible_points", :null => false
     t.text     "answer"
-    t.string   "name",             :null => false
+    t.string   "name",            :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
