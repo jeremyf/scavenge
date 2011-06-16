@@ -9,7 +9,7 @@ gem 'sqlite3'
 
 # Asset template engines
 gem 'json'
-gem 'sass-rails', "~> 3.1.0.rc"
+gem 'sass-rails', "~> 3.1.0.rc2"
 gem 'coffee-script'
 gem 'uglifier'
 
@@ -32,7 +32,7 @@ gem 'devise'
 gem "meta_search", :git => "git://github.com/ernie/meta_search.git"
 gem 'kaminari'
 gem 'inherited_resources'
-gem 'activeadmin', :git => 'git://github.com/evizitei/active_admin', :branch => 'rails-3-1'
+gem 'activeadmin', :git => 'git://github.com/gregbell/active_admin', :branch => 'rails-3-1'
 
 group :development do
   gem 'ruby-debug'

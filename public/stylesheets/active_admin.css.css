@@ -1,0 +1,108 @@
+/*
+Syntax error: File to import not found or unreadable: active_admin/mixins.
+              Load paths:
+                Compass::SpriteImporter
+                /Users/jeremyf/Documents/Repositories/git/scavenge/public/stylesheets/sass
+                /Users/jeremyf/Documents/Repositories/git/scavenge/app/assets/stylesheets
+                /Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/compass-0.11.3/frameworks/blueprint/stylesheets
+                /Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/compass-0.11.3/frameworks/compass/stylesheets
+        on line 2 of /Users/jeremyf/Documents/Repositories/git/scavenge/app/assets/stylesheets/active_admin.css.scss
+
+1: // Active Admin CSS Styles
+2: @import "active_admin/mixins";
+3: @import "active_admin/base";
+4: 
+5: // To customize the Active Admin interfaces, add your
+6: // styles here:
+
+Backtrace:
+/Users/jeremyf/Documents/Repositories/git/scavenge/app/assets/stylesheets/active_admin.css.scss:2
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/sass-3.1.2/lib/sass/../sass/tree/import_node.rb:64:in `import'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/sass-3.1.2/lib/sass/../sass/tree/import_node.rb:25:in `imported_file'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/sass-3.1.2/lib/sass/../sass/tree/visitors/perform.rb:148:in `visit_import'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/sass-3.1.2/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/sass-3.1.2/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/sass-3.1.2/lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/sass-3.1.2/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/sass-3.1.2/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/sass-3.1.2/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/sass-3.1.2/lib/sass/../sass/tree/visitors/perform.rb:27:in `visit_children'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/sass-3.1.2/lib/sass/../sass/tree/visitors/perform.rb:39:in `with_environment'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/sass-3.1.2/lib/sass/../sass/tree/visitors/perform.rb:26:in `visit_children'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/sass-3.1.2/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/sass-3.1.2/lib/sass/../sass/tree/visitors/perform.rb:47:in `visit_root'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/sass-3.1.2/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/sass-3.1.2/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/sass-3.1.2/lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/sass-3.1.2/lib/sass/../sass/tree/visitors/perform.rb:7:in `send'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/sass-3.1.2/lib/sass/../sass/tree/visitors/perform.rb:7:in `visit'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/sass-3.1.2/lib/sass/../sass/tree/root_node.rb:20:in `render'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/sass-3.1.2/lib/sass/../sass/engine.rb:291:in `_render'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/sass-3.1.2/lib/sass/../sass/engine.rb:239:in `render'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/sass-3.1.2/lib/sass/../sass/util.rb:298:in `silence_sass_warnings'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/sass-3.1.2/lib/sass/../sass/engine.rb:239:in `render'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/sass-3.1.2/lib/sass/../sass/plugin/compiler.rb:319:in `update_stylesheet'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/sass-3.1.2/lib/sass/../sass/plugin/compiler.rb:181:in `update_stylesheets'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/sass-3.1.2/lib/sass/../sass/plugin/compiler.rb:175:in `each'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/sass-3.1.2/lib/sass/../sass/plugin/compiler.rb:175:in `update_stylesheets'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/sass-3.1.2/lib/sass/../sass/plugin/compiler.rb:173:in `each'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/sass-3.1.2/lib/sass/../sass/plugin/compiler.rb:173:in `update_stylesheets'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/sass-3.1.2/lib/sass/../sass/plugin.rb:81:in `update_stylesheets'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/sass-3.1.2/lib/sass/../sass/plugin.rb:54:in `check_for_updates'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/sass-3.1.2/lib/sass/../sass/plugin/rack.rb:51:in `call'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/warden-1.0.4/lib/warden/manager.rb:35:in `call'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/warden-1.0.4/lib/warden/manager.rb:34:in `catch'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/warden-1.0.4/lib/warden/manager.rb:34:in `call'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-3.1.0.rc4/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.3.0/lib/rack/etag.rb:23:in `call'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.3.0/lib/rack/conditionalget.rb:25:in `call'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-3.1.0.rc4/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-3.1.0.rc4/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-3.1.0.rc4/lib/action_dispatch/middleware/flash.rb:243:in `call'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.3.0/lib/rack/session/abstract/id.rb:195:in `context'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.3.0/lib/rack/session/abstract/id.rb:190:in `call'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-3.1.0.rc4/lib/action_dispatch/middleware/cookies.rb:321:in `call'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/activerecord-3.1.0.rc4/lib/active_record/query_cache.rb:54:in `call'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/activerecord-3.1.0.rc4/lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `call'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-3.1.0.rc4/lib/action_dispatch/middleware/callbacks.rb:29:in `call'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/activesupport-3.1.0.rc4/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/activesupport-3.1.0.rc4/lib/active_support/callbacks.rb:81:in `send'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/activesupport-3.1.0.rc4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-3.1.0.rc4/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-3.1.0.rc4/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.3.0/lib/rack/sendfile.rb:102:in `call'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-3.1.0.rc4/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-3.1.0.rc4/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/railties-3.1.0.rc4/lib/rails/rack/logger.rb:13:in `call'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.3.0/lib/rack/methodoverride.rb:24:in `call'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.3.0/lib/rack/runtime.rb:17:in `call'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/activesupport-3.1.0.rc4/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.3.0/lib/rack/lock.rb:34:in `call'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-3.1.0.rc4/lib/action_dispatch/middleware/static.rb:53:in `call'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/railties-3.1.0.rc4/lib/rails/engine.rb:438:in `call'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/railties-3.1.0.rc4/lib/rails/rack/content_length.rb:16:in `call'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/railties-3.1.0.rc4/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.3.0/lib/rack/handler/webrick.rb:59:in `service'
+/Users/jeremyf/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/Users/jeremyf/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/Users/jeremyf/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/Users/jeremyf/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/Users/jeremyf/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/Users/jeremyf/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/Users/jeremyf/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/Users/jeremyf/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/Users/jeremyf/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/Users/jeremyf/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.3.0/lib/rack/handler/webrick.rb:13:in `run'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.3.0/lib/rack/server.rb:265:in `start'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/railties-3.1.0.rc4/lib/rails/commands/server.rb:70:in `start'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/railties-3.1.0.rc4/lib/rails/commands.rb:54
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/railties-3.1.0.rc4/lib/rails/commands.rb:49:in `tap'
+/Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/railties-3.1.0.rc4/lib/rails/commands.rb:49
+script/rails:6:in `require'
+script/rails:6
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: File to import not found or unreadable: active_admin/mixins.\A               Load paths:\A                 Compass::SpriteImporter\A                 /Users/jeremyf/Documents/Repositories/git/scavenge/public/stylesheets/sass\A                 /Users/jeremyf/Documents/Repositories/git/scavenge/app/assets/stylesheets\A                 /Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/compass-0.11.3/frameworks/blueprint/stylesheets\A                 /Users/jeremyf/.rvm/gems/ruby-1.8.7-p249/gems/compass-0.11.3/frameworks/compass/stylesheets\A         on line 2 of /Users/jeremyf/Documents/Repositories/git/scavenge/app/assets/stylesheets/active_admin.css.scss\A \A 1: // Active Admin CSS Styles\A 2: @import \"active_admin/mixins\";\A 3: @import \"active_admin/base\";\A 4: \A 5: // To customize the Active Admin interfaces, add your\A 6: // styles here:"; }
