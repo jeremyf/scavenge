@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0.rc1'
+gem 'rails', '3.1.0.rc4'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -29,6 +29,10 @@ gem 'jquery-rails'
 gem 'paper_trail'
 gem 'formtastic'
 gem 'devise'
+gem 'meta_search'
+gem 'kaminari'
+gem 'inherited_resources'
+gem 'activeadmin', :git => 'git://github.com/evizitei/active_admin', :branch => 'rails-3-1'
 
 group :development do
   gem 'ruby-debug'

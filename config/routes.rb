@@ -1,13 +1,5 @@
 Scavenge::Application.routes.draw do
-  devise_for :users
+  devise_for :admin_users, ActiveAdmin::Devise.config
 
-  resources :teams
-
-  resources :clues
-
-  resources :questions
-
-  resources :solutions
-
-  root :to => "home#index"
+  ActiveAdmin.routes(self)
 end
