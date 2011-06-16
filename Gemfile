@@ -29,7 +29,7 @@ gem 'jquery-rails'
 gem 'paper_trail'
 gem 'formtastic'
 gem 'devise'
-gem 'meta_search'
+gem "meta_search", :git => "git://github.com/ernie/meta_search.git"
 gem 'kaminari'
 gem 'inherited_resources'
 gem 'activeadmin', :git => 'git://github.com/evizitei/active_admin', :branch => 'rails-3-1'

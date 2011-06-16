@@ -1,6 +1,6 @@
 class Team < ActiveRecord::Base
   has_many :solutions, :dependent => :destroy
-  has_many :questions, :through => :solutions
+  # has_many :questions, :through => :solutions
   has_and_belongs_to_many :users
 
   class Score
