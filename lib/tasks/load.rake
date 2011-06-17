@@ -1,9 +1,10 @@
 desc "Load some test data for everyone's edification"
 task 'load_data' => [:environment] do
-  TeamMember.create!(:email => 'jfriesen@nd.edu', :password => 'password', :password_confirmation => 'password')
   AdminUser.create!(:email => 'jeremy.n.friesen@gmail.com', :password => 'password', :password_confirmation => 'password')
   ["Leahy", "Rockne", "Holtz"].each do |name|
-    Team.create!(:name => name)
+    Team.create(:name => name).tap do |team|
+      team.team_members.build(:email => "#{team}@nd.edu", :password => 'password', :password_confirmation => 'password')
+    end.save!
   end
 
   Question.new(:possible_points => 10, :name => "What is your name?", :answer => 'Sir Lancelot').tap do |question|

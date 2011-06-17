@@ -4,7 +4,7 @@
   <li>Leader Board</li>
 </ul>
 
-<div id="remaining_questions">
+<div id="team_solutions">
   <table>
     <thead>
       <tr>
@@ -21,28 +21,10 @@
         <td><%= solution.score.clues_purchased %></td>
       </tr>
     <%- end -%>
-  </ul>
+    </tbody>
+  </table>
 </div>
 
 <div id="leader_board">
-  <table>
-    <thead>
-      <tr>
-        <th>Team</th>
-        <th>Score</th>
-        <th>Possible</th>
-        <th>Clues Purchased</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% Team.leaderboard.each do |team| %>
-        <tr>
-          <td><%= team %></td>
-          <td><%= team.score.current %></td>
-          <td><%= team.score.possible %></td>
-          <td><%= team.score.clues_purchased %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+  <%= render 'leader_board' %>
 </div>

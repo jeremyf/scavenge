@@ -1,0 +1,20 @@
+<table>
+  <thead>
+    <tr>
+      <th>Team</th>
+      <th>Score</th>
+      <th>Possible</th>
+      <th>Clues Purchased</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% Team.leaderboard.each do |team| %>
+      <tr>
+        <td><%= team %></td>
+        <td><%= team.score.current %></td>
+        <td><%= team.score.possible %></td>
+        <td><%= team.score.clues_purchased %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
