@@ -32,8 +32,8 @@ gem 'devise'
 gem "meta_search", :git => "git://github.com/ernie/meta_search.git"
 gem 'kaminari'
 gem 'inherited_resources'
-gem 'activeadmin', :git => 'git://github.com/gregbell/active_admin', :branch => 'rails-3-1'
+gem 'activeadmin', :git => 'git://github.com/webmat/active_admin', :ref => '6bc77db73792ad0ccf826774383dee6712cfda5a'
 
 group :development do
-  gem 'ruby-debug'
+  # gem 'ruby-debug'
 end
