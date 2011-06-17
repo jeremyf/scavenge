@@ -9,6 +9,7 @@ class CreateSolutions < ActiveRecord::Migration
     end
     add_index :solutions, :question_id
     add_index :solutions, :team_id
+    add_index :solutions, :state
     add_index :solutions, [:question_id, :team_id], :unique => true
   end
 end

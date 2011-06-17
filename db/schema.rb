@@ -98,6 +98,7 @@ ActiveRecord::Schema.define(:version => 20110616132927) do
 
   add_index "solutions", ["question_id", "team_id"], :name => "index_solutions_on_question_id_and_team_id", :unique => true
   add_index "solutions", ["question_id"], :name => "index_solutions_on_question_id"
+  add_index "solutions", ["state"], :name => "index_solutions_on_state"
   add_index "solutions", ["team_id"], :name => "index_solutions_on_team_id"
 
   create_table "teams", :force => true do |t|

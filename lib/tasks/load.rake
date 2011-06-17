@@ -16,4 +16,10 @@ task 'load_data' => [:environment] do
     question.clues.build(:point_cost => 2, :name => 'It is not', :text => 'Yellow')
     question.clues.build(:point_cost => 4, :name => 'It is...', :text => 'Is the color of the sky')
   end.save!
+
+  Team.all.each do |team|
+    Question.all.each do |question|
+      team.solutions.create(:question => question)
+    end
+  end
 end

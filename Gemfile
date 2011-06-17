@@ -27,6 +27,7 @@ gem 'jquery-rails'
 # gem 'paperclip', '~> 2.3'
 
 gem 'paper_trail'
+gem 'state_machine'
 gem 'formtastic'
 gem 'devise'
 gem "meta_search", :git => "git://github.com/ernie/meta_search.git"

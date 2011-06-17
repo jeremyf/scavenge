@@ -1,0 +1,48 @@
+<h1>Welcome</h1>
+<ul>
+  <li>Remaining Questions</li>
+  <li>Leader Board</li>
+</ul>
+
+<div id="remaining_questions">
+  <table>
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th>Possible</th>
+        <th>Clues Purchased</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @current_team.solutions.with_state(:open).each do |solution| %>
+      <tr>
+        <td><%= solution.question %></td>
+        <td><%= solution.score.possible %></td>
+        <td><%= solution.score.clues_purchased %></td>
+      </tr>
+    <%- end -%>
+  </ul>
+</div>
+
+<div id="leader_board">
+  <table>
+    <thead>
+      <tr>
+        <th>Team</th>
+        <th>Score</th>
+        <th>Possible</th>
+        <th>Clues Purchased</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% Team.leaderboard.each do |team| %>
+        <tr>
+          <td><%= team %></td>
+          <td><%= team.score.current %></td>
+          <td><%= team.score.possible %></td>
+          <td><%= team.score.clues_purchased %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
