@@ -1,11 +1,11 @@
 class DeviseCreateAdminUsers < ActiveRecord::Migration
   def self.up
-    create_table(:admin_users) do |t|
+    create_table(:users) do |t|
       t.database_authenticatable :null => false
       t.recoverable
       t.rememberable
       t.trackable
-
+      t.string :type, :limit => 32
       t.encryptable
       t.confirmable
       t.lockable :lock_strategy => :failed_attempts, :unlock_strategy => :both
@@ -15,14 +15,15 @@ class DeviseCreateAdminUsers < ActiveRecord::Migration
       t.timestamps
     end
 
-    add_index :admin_users, :email,                :unique => true
-    add_index :admin_users, :reset_password_token, :unique => true
-    add_index :admin_users, :confirmation_token,   :unique => true
-    add_index :admin_users, :unlock_token,         :unique => true
-    add_index :admin_users, :authentication_token, :unique => true
+    add_index :users, :email,                :unique => true
+    add_index :users, :type
+    add_index :users, :reset_password_token, :unique => true
+    add_index :users, :confirmation_token,   :unique => true
+    add_index :users, :unlock_token,         :unique => true
+    add_index :users, :authentication_token, :unique => true
   end
 
   def self.down
-    drop_table :admin_users
+    drop_table :users
   end
 end

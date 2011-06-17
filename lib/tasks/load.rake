@@ -1,5 +1,7 @@
 desc "Load some test data for everyone's edification"
 task 'load_data' => [:environment] do
+  TeamMember.create!(:email => 'jfriesen@nd.edu', :password => 'password', :password_confirmation => 'password')
+  AdminUser.create!(:email => 'jeremy.n.friesen@gmail.com', :password => 'password', :password_confirmation => 'password')
   ["Leahy", "Rockne", "Holtz"].each do |name|
     Team.create!(:name => name)
   end
