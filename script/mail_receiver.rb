@@ -14,20 +14,20 @@ begin
 
   # select inbox as our mailbox to process
   imap.select('Inbox')
-  
+
   # get all emails that are in inbox that have not been deleted
   imap.uid_search(["NOT", "DELETED"]).each do |uid|
     # fetches the straight up source of the email
     source   = imap.uid_fetch(uid, 'RFC822').first.attr['RFC822']
-  
-  begin
-     
-	puts 'begining the receive method'
-	 Emailer.receive(source)
-	
-     end
-  
-   # Delete the email
+
+    begin
+
+      puts 'begining the receive method'
+      SolutionHandler.receive(source)
+
+    end
+
+    # Delete the email
     imap.uid_copy(uid, "[Gmail]/All Mail")
     imap.uid_store(uid, "+FLAGS", [:Deleted])
   end
@@ -37,14 +37,14 @@ begin
   imap.logout
   imap.disconnect
   # NoResponseError and ByResponseError happen often when imap'ing
-  rescue Net::IMAP::NoResponseError => e
-    # Log if you'd like
-  rescue Net::IMAP::ByeResponseError => e
-    # Log if you'd like
-  rescue => e
+rescue Net::IMAP::NoResponseError => e
+  # Log if you'd like
+rescue Net::IMAP::ByeResponseError => e
+  # Log if you'd like
+rescue => e
   puts "Error: #{e.message}"
-    #log.warn e
-	#logger.error "Error receiving email: #{Time.now.to_s} - #{e.message}"
-	
+  #log.warn e
+  #logger.error "Error receiving email: #{Time.now.to_s} - #{e.message}"
+
 
 end

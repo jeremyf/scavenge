@@ -7,9 +7,13 @@
 one:
   id: 1
   email: one@example.com
+  type: TeamMember
+  team_id: 1
 # column: value
 #
 two:
   id: 2
   email: two@example.com
+  type: TeamMember
+  team_id: 2
 #  column: value

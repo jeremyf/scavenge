@@ -1,10 +1,12 @@
-class Emailer < ActionMailer::Base
+class SolutionHandler < ActionMailer::Base
 
   def receive(mail)
-    if attachment = mail.attachments[0]
-      user = User.find_by_email(mail.from)
+    if attachment = mail.attachments.first
+      team_member = TeamMember.where(:email => mail.from).includes(:team).first
       # The subject is going to need to be parsed
       subject = mail.subject
+
+      team_member.propose_solution_via_email(subject, attachment)
     else
       # Maybe we should send them a response?
     end
@@ -22,5 +24,7 @@ class Emailer < ActionMailer::Base
     # # :author => author
     # puts 'posted Email as message'
   end
+
+
 
 end
