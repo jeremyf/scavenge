@@ -5,7 +5,7 @@ class HomeController < ApplicationController
 
   def purchase_clue
     clue = Clue.find(params[:clue_id])
-    if current_team_member.purchase(clue)
+    if Solution.purchase_clue(current_team_member, clue)
       flash[:notice] = "Clue purchased: #{clue.text}"
       respond_to do |format|
         format.html { redirect_to home_path }

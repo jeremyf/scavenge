@@ -56,6 +56,20 @@ class Solution < ActiveRecord::Base
     @points_awarded
   end
 
+  def self.purchase_clue(team_member, clue)
+    team = team_member.respond_to?(:team) ? team_member.team : TeamMember.include(:team).find(team_member).team
+    clue = clue.respond_to?(:question_id) ? clue : Clue.find(clue).includes(:question)
+    question = clue.question
+    where(:team_id => team[:id]).where(:question_id => question[:id]).first.tap do |solution|
+      begin
+        solution.purchased_clues << clue unless solution.purchased_clues.include?(clue)
+      rescue ActiveRecord::StatementInvalid => e
+        true # this was already solved, no worries
+      end
+    end
+    return true
+  end
+
   def self.propose(team_member, possible_question, attachment)
     team = team_member.team
     question = Question.find(possible_question)

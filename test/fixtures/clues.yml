@@ -13,3 +13,9 @@ two:
   point_cost: 1
   name: MyString
   text: MyText
+unpurchased_clue:
+  id: 3
+  question_id: 1
+  point_cost: 3
+  name: unpurchased_clue
+  text: unpurchased_clue

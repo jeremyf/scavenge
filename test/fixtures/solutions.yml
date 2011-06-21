@@ -2,24 +2,24 @@
 
 one:
   id: 1
-  question: one
+  question_id: 1
   team_id: 1
   state: solved
 
 two:
   id: 2
-  question: two
+  question_id: 2
   team_id: 1
   state: solved
 
 open:
   id: 3
-  question: one
+  question_id: 1
   team_id: 2
   state: open
 
 pending:
   id: 4
-  question: two
+  question_id: 2
   team_id: 2
   state: pending

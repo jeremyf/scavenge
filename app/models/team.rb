@@ -14,4 +14,8 @@ class Team < ActiveRecord::Base
   def score
     @score ||= Score.new(self.solutions)
   end
+
+  def team
+    self
+  end
 end
