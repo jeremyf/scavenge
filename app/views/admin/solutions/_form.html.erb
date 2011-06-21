@@ -7,9 +7,10 @@
   <% if f.object.solved? && f.object.proposed_solution?  %>
     <%= f.inputs do %>
       <%= image_tag f.object.proposed_solution.url  %>
-      <%= f.input :confirm_proposed_solution, :as => :boolean %>
+      <%= f.input :response_for_proposed_solution, :as => :select, :collection => Solution::RESPONSES %>
     <% end %>
-  <%- else -%>
+  <% else %>
     <p>Solution has yet to be provided.</p>
   <% end %>
+  <%= f.buttons %>
 <% end %>

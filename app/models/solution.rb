@@ -1,4 +1,5 @@
 class Solution < ActiveRecord::Base
+  RESPONSES = ['Accept', 'Reject']
   belongs_to :question
   belongs_to :team
   has_and_belongs_to_many :clues
@@ -22,9 +23,11 @@ class Solution < ActiveRecord::Base
     @score ||= Score.new([self])
   end
 
-  attr_reader :confirm_proposed_solution
-  def confirm_proposed_solution=(value)
-    value.to_i > 0 ? confirm : unconfirm
+  attr_reader :response_for_proposed_solution
+  def response_for_proposed_solution=(value)
+    RESPONSES.each do |response|
+      send(response.downcase) if value.to_s.downcase == response.downcase
+    end
   end
 
   def points_awarded
@@ -54,17 +57,18 @@ class Solution < ActiveRecord::Base
       transition :open => :pending
     end
 
-    event :confirm do
-      transition :pending => :confirmed
+    event :accept do
+      transition [:rejected, :pending] => :accepted
     end
 
-    event :unconfirm do
-      transition :confirmed => :pending
+    event :reject do
+      transition [:accepted, :pending] => :rejected
     end
 
     state :open
     state :pending
-    state :confirmed
+    state :accepted
+    state :rejected
   end
 
   def solved?

@@ -38,7 +38,18 @@ class SolutionTest < ActiveSupport::TestCase
     @solution = solutions(:pending)
 
     assert_equal 'pending', @solution.reload.state
-    @solution.update_attributes(:confirm_proposed_solution => '1')
-    assert_equal 'confirmed', @solution.reload.state
+    @solution.update_attributes(:response_for_proposed_solution => 'accept')
+    assert_equal 'accepted', @solution.reload.state
+  end
+
+  test 'should reject then confirm solution' do
+    @solution = solutions(:pending)
+
+    assert_equal 'pending', @solution.reload.state
+    @solution.update_attributes(:response_for_proposed_solution => 'reject')
+    assert_equal 'rejected', @solution.reload.state
+
+    @solution.update_attributes(:response_for_proposed_solution => 'accept')
+    assert_equal 'accepted', @solution.reload.state
   end
 end
