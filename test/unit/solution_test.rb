@@ -23,4 +23,14 @@ class SolutionTest < ActiveSupport::TestCase
   test 'should have #possible_points_still_available' do
     assert_equal 9, @solution.possible_points_still_available
   end
+
+  test 'should propose solution transition solution' do
+    @solution = solutions(:open)
+    @team_member = @solution.team.team_members.first
+    @question = @solution.question
+
+    assert_equal 'open', @solution.state
+    Solution.propose(@team_member, @question.to_param, '')
+    assert_equal 'pending', @solution.reload.state
+  end
 end

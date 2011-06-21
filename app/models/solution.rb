@@ -51,14 +51,12 @@ class Solution < ActiveRecord::Base
       transition :pending => :confirmed
     end
 
-    state :open do
-      def solved?; false; end
-    end
-    state :pending do
-      def solved?; true; end
-    end
-    state :confirmed do
-      def solved?; true; end
-    end
+    state :open
+    state :pending
+    state :confirmed
+  end
+
+  def solved?
+    !open?
   end
 end
