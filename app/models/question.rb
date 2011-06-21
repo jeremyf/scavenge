@@ -5,6 +5,4 @@ class Question < ActiveRecord::Base
   def to_s
     name
   end
-
-  def email_subject; to_param; end
 end

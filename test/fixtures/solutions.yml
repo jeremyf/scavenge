@@ -4,10 +4,16 @@ one:
   id: 1
   question: one
   team_id: 1
-  state: Solved
+  state: solved
 
 two:
   id: 2
   question: two
   team_id: 1
-  state: Solved
+  state: solved
+
+open:
+  id: 3
+  question: one
+  team_id: 2
+  state: open

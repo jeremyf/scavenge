@@ -29,6 +29,19 @@ class Solution < ActiveRecord::Base
     @points_awarded
   end
 
+  def self.propose(team_member, possible_question, attachment)
+    team = team_member.team
+    question = Question.find(possible_question)
+
+    where(:team_id => team[:id]).where(:question_id => question[:id]).first.tap do |solution|
+      solution.propose_solution(attachment)
+    end
+  end
+
+  def propose_solution(attachment)
+    solve!
+  end
+
   state_machine :state, :initial => :open do
     event :solve do
       transition :open => :pending
