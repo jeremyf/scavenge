@@ -33,4 +33,12 @@ class SolutionTest < ActiveSupport::TestCase
     Solution.propose(@team_member, @question.to_param, '')
     assert_equal 'pending', @solution.reload.state
   end
+
+  test 'should confirm solution' do
+    @solution = solutions(:pending)
+
+    assert_equal 'pending', @solution.reload.state
+    @solution.update_attributes(:confirm_proposed_solution => '1')
+    assert_equal 'confirmed', @solution.reload.state
+  end
 end

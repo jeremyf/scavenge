@@ -17,3 +17,9 @@ open:
   question: one
   team_id: 2
   state: open
+
+pending:
+  id: 4
+  question: two
+  team_id: 2
+  state: pending

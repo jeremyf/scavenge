@@ -7,7 +7,7 @@
   <% if f.object.solved? && f.object.proposed_solution?  %>
     <%= f.inputs do %>
       <%= image_tag f.object.proposed_solution.url  %>
-      <%= f.input :approve_proposed_solution, :as => :boolean %>
+      <%= f.input :confirm_proposed_solution, :as => :boolean %>
     <% end %>
   <%- else -%>
     <p>Solution has yet to be provided.</p>

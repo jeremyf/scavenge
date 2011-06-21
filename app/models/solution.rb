@@ -1,5 +1,4 @@
 class Solution < ActiveRecord::Base
-  attr_accessor :approve_proposed_solution
   belongs_to :question
   belongs_to :team
   has_and_belongs_to_many :clues
@@ -21,6 +20,11 @@ class Solution < ActiveRecord::Base
 
   def score
     @score ||= Score.new([self])
+  end
+
+  attr_reader :confirm_proposed_solution
+  def confirm_proposed_solution=(value)
+    value.to_i > 0 ? confirm : unconfirm
   end
 
   def points_awarded
@@ -52,6 +56,10 @@ class Solution < ActiveRecord::Base
 
     event :confirm do
       transition :pending => :confirmed
+    end
+
+    event :unconfirm do
+      transition :confirmed => :pending
     end
 
     state :open
