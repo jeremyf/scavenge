@@ -1,0 +1,11 @@
+<%= semantic_form_for [:admin, @solution] do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :team, :input_html => { :disabled => !f.object.new_record? } %>
+    <%= f.input :question, :input_html => { :disabled => !f.object.new_record? } %>
+  <% end %>
+  <%- if f.object.proposed_solution? -%>
+    <%= f.inputs do %>
+      <%= image_tag f.object.proposed_solution.url  %>
+    <% end %>
+  <% end  %>
+<% end %>

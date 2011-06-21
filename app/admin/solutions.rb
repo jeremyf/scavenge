@@ -11,4 +11,6 @@ ActiveAdmin.register Solution do
     column :state_name
     default_actions
   end
+
+  form :partial => 'form'
 end
