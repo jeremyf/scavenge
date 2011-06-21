@@ -1,5 +1,11 @@
-<h1>Welcome</h1>
+<h1>Welcome <%= current_team_member %></h1>
 <ul>
+  <li>
+    <%- if team_member_signed_in? -%>
+      <%= link_to 'Sign Out', destroy_team_member_session_path %>
+    <%- else -%>
+      <%= link_to "Sign In", new_team_member_session_path  %></li>
+    <%- end -%>
   <li>Remaining Questions</li>
   <li>Leader Board</li>
 </ul>

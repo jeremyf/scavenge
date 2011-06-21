@@ -4,4 +4,7 @@ Scavenge::Application.routes.draw do
   ActiveAdmin.routes(self)
 
   match '/' => 'home#index', :as => :home
+  match '/' => 'home#index', :as => :root
+
+  devise_for :team_members, :controllers => { :sessions => "sessions" }
 end
