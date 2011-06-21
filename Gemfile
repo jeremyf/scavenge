@@ -26,6 +26,7 @@ gem 'jquery-rails'
 
 # gem 'paperclip', '~> 2.3'
 
+gem 'carrierwave', "~> 0.5"
 gem 'paper_trail'
 gem 'state_machine'
 gem 'formtastic'

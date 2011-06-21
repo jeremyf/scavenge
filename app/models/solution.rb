@@ -2,6 +2,7 @@ class Solution < ActiveRecord::Base
   belongs_to :question
   belongs_to :team
   has_and_belongs_to_many :clues
+  mount_uploader :proposed_solution, ProposedSolutionUploader
 
   delegate :possible_points, :to => :question
 
@@ -39,6 +40,7 @@ class Solution < ActiveRecord::Base
   end
 
   def propose_solution(attachment)
+    self.proposed_solution = attachment
     solve!
   end
 

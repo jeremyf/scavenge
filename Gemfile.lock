@@ -58,6 +58,8 @@ GEM
     arel (2.1.1)
     bcrypt-ruby (2.1.4)
     builder (3.0.0)
+    carrierwave (0.5.4)
+      activesupport (~> 3.0)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
@@ -151,6 +153,7 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin!
+  carrierwave (~> 0.5)
   coffee-script
   devise
   formtastic
