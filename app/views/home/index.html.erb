@@ -10,26 +10,43 @@
   <li>Leader Board</li>
 </ul>
 
-<div id="team_solutions">
-  <table>
-    <thead>
-      <tr>
-        <th>Question</th>
-        <th>Possible</th>
-        <th>Clues Purchased</th>
-      </tr>
-    </thead>
-    <tbody>
-    <% @current_team.solutions.with_state(:open).each do |solution| %>
-      <tr>
-        <td><%= solution.question %></td>
-        <td><%= solution.score.possible %></td>
-        <td><%= solution.score.clues_purchased %></td>
-      </tr>
-    <%- end -%>
-    </tbody>
-  </table>
-</div>
+<%- if current_team_member -%>
+  <div id="team_solutions">
+    <table>
+      <thead>
+        <tr>
+          <th>Question</th>
+          <th>Email Subject</th>
+          <th>Possible</th>
+          <th>Clues</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% current_team_member.team.solutions.with_state(:open).each do |solution| %>
+        <tr>
+          <td><%= solution.question %></td>
+          <td><%= solution.email_subject %></td>
+          <td><%= solution.score.possible %></td>
+          <td>
+            <ul>
+              <%- solution.clues.each do |clue| -%>
+                <li>
+                  <%= content_tag 'span', clue, :class => dom_class(clue) %>
+                  <%- if clue.purchased? -%>
+                    <br><span class="clue_text"> <%= clue.text %></span>
+                  <%- else -%>
+                    <%= link_to 'Purchase?', purchase_clue_path(clue), :method => :post, :confirm => "This will reduce the questions value by #{clue.point_cost}. Are you sure?" %>
+                  <%- end -%>
+                </li>
+              <%- end -%>
+            </ul>
+          </td>
+        </tr>
+      <%- end -%>
+      </tbody>
+    </table>
+  </div>
+<%- end -%>
 
 <div id="leader_board">
   <%= render 'leader_board' %>

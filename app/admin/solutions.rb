@@ -8,7 +8,13 @@ ActiveAdmin.register Solution do
     column :question do |solution|
       link_to solution.question, admin_questions_path(:q => {:id_eq => solution.question[:id]})
     end
-    column :state_name
+    column :clues do |solution|
+      ul
+        solution.clues.each do |clue|
+          li clue, :class => dom_class(clue)
+        end
+    end
+    column :state
     default_actions
   end
 

@@ -2,17 +2,35 @@ class Solution < ActiveRecord::Base
   RESPONSES = ['Accept', 'Reject']
   belongs_to :question
   belongs_to :team
-  has_and_belongs_to_many :clues
+  has_and_belongs_to_many :purchased_clues, :join_table => 'clues_solutions', :class_name => 'Clue'
   mount_uploader :proposed_solution, ProposedSolutionUploader
 
   delegate :possible_points, :to => :question
+
+  def email_subject
+    question[:id].to_s
+  end
+
+  def clues
+    return @clues if @clues
+    @clues = []
+    question.clues.inject(@clues) {|mem, clue|
+      clue.singleton_class.send(:attr_writer, :purchased)
+      clue.purchased = purchased_clues.include?(clue)
+      def clue.purchased?
+        !!@purchased
+      end
+      mem << clue
+    }
+    @clues
+  end
 
   def possible_points_still_available
     possible_points - points_spent_on_clues
   end
 
   def points_spent_on_clues
-    clues.sum(:point_cost)
+    purchased_clues.sum(:point_cost)
   end
 
   def to_s
