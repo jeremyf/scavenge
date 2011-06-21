@@ -1,11 +1,15 @@
+<h2>Current Status: <%= @solution.state_name %></h2>
 <%= semantic_form_for [:admin, @solution] do |f| %>
   <%= f.inputs do %>
     <%= f.input :team, :input_html => { :disabled => !f.object.new_record? } %>
     <%= f.input :question, :input_html => { :disabled => !f.object.new_record? } %>
   <% end %>
-  <%- if f.object.proposed_solution? -%>
+  <% if f.object.solved? && f.object.proposed_solution?  %>
     <%= f.inputs do %>
       <%= image_tag f.object.proposed_solution.url  %>
+      <%= f.input :approve_proposed_solution, :as => :boolean %>
     <% end %>
-  <% end  %>
+  <%- else -%>
+    <p>Solution has yet to be provided.</p>
+  <% end %>
 <% end %>

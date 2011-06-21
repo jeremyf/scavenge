@@ -1,4 +1,5 @@
 class Solution < ActiveRecord::Base
+  attr_accessor :approve_proposed_solution
   belongs_to :question
   belongs_to :team
   has_and_belongs_to_many :clues
