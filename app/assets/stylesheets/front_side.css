@@ -1,0 +1,7 @@
+table {width:auto; margin:20px -16px;}
+th {color:#fff; background-color:#000; text-shadow:none;}
+th, td {margin:0; padding:5px 8px 3px; border:none;}
+
+.ui-content .ui-listview {margin-bottom:0;}
+
+#leader_board {clear:both; margin:20px 0;}

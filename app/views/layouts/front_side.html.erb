@@ -2,16 +2,25 @@
 <html>
 <head>
   <title>Scavenge</title>
-  <%= stylesheet_link_tag    "application", "front_side" %>
-  <%= javascript_include_tag "application" %>
+  <link rel="apple-touch-icon" href="/images/webclip.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <%= stylesheet_link_tag    "jquery-mobile", "front_side" %>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+  <%= javascript_include_tag "jquery-mobile" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
 
-  <p>Welcome to the Front Side</p>
-  <%= yield %>
+<div data-role="page">
+  <div data-role="header">
+      <h1>Scavenge</h1>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+  </div><!-- /header -->
+  <div data-role="content">
+    <%= yield %>
+  </div>
+</div><!-- /page -->
 
 </body>
 </html>
