@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+  layout 'front_side'
   before_filter :authenticate_team_member!, :only => :purchase_clue
   def index
   end
