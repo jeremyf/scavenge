@@ -11,16 +11,9 @@
 </head>
 <body>
 
-<div data-role="page">
-  <div data-role="header">
-      <h1>Scavenge</h1>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-  </div><!-- /header -->
-  <div data-role="content">
+<%= render :partial => "shared/jquery_mobile_page_start" %>
     <%= yield %>
-  </div>
-</div><!-- /page -->
+<%= render :partial => "shared/jquery_mobile_page_end" %>
 
 </body>
 </html>
