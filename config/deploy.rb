@@ -1,3 +1,5 @@
+require 'bundler/setup'
+require 'bundler/capistrano'
 set :application, "scavenge"
 set :user, 'deploy'
 set :repository,  "git@github.com:jeremyf/scavenge.git"
