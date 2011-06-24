@@ -1,22 +1,18 @@
-set :application, "set your application name here"
-set :repository,  "set your repository location here"
+set :application, "scavenge"
+set :user, 'deploy'
+set :repository,  "git@github.com:jeremyf/scavenge.git"
+set :deploy_to,   "/var/www/apps/#{application}"
+set :scm, :git
 
-set :scm, :subversion
-# Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
-
-role :web, "your web-server here"                          # Your HTTP server, Apache/etc
-role :app, "your app-server here"                          # This may be the same as your `Web` server
-role :db,  "your primary db-server here", :primary => true # This is where Rails migrations will run
-role :db,  "your slave db-server here"
-
-# if you're still using the script/reaper helper you will need
-# these http://github.com/rails/irs_process_scripts
+role :web, "app3.ndwebgroup.railsmachina.com" # Your HTTP server, Apache/etc
+role :app, "app3.ndwebgroup.railsmachina.com" # This may be the same as your `Web` server
+role :db,  "app3.ndwebgroup.railsmachina.com", :primary => true # This is where Rails migrations will run
 
 # If you are using Passenger mod_rails uncomment this:
-# namespace :deploy do
-#   task :start do ; end
-#   task :stop do ; end
-#   task :restart, :roles => :app, :except => { :no_release => true } do
-#     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
-#   end
-# end
+namespace :deploy do
+  task :start do ; end
+  task :stop do ; end
+  task :restart, :roles => :app, :except => { :no_release => true } do
+    run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
+  end
+end
