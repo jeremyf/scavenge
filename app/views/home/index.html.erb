@@ -1,5 +1,5 @@
 <h1>Welcome <%= current_team_member %></h1>
-<ul>
+<ul data-role="listview">
   <li>
     <%- if team_member_signed_in? -%>
       <%= link_to 'Sign Out', destroy_team_member_session_path %>

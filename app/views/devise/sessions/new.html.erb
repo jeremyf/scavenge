@@ -1,3 +1,5 @@
+<%= render :partial => "shared/jquery_mobile_page_start" %>
+
 <h2>Sign in</h2>
 
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
@@ -15,3 +17,8 @@
 <% end %>
 
 <%= render :partial => "devise/shared/links" %>
+
+
+    <%= yield %>
+
+<%= render :partial => "shared/jquery_mobile_page_end" %>
