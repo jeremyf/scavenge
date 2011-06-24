@@ -8,6 +8,8 @@ gem 'rails', '3.1.0.rc4'
 gem 'mysql', '2.8.1'
 # gem 'sqlite3'
 
+gem 'therubyracer'
+
 # Asset template engines
 gem 'json'
 gem 'sass-rails', "~> 3.1.0.rc2"
