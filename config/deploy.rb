@@ -17,4 +17,11 @@ namespace :deploy do
   task :restart, :roles => :app, :except => { :no_release => true } do
     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
   end
+
+  after "deploy:symlink", "deploy:additional_symlinks"
+  desc "Create additional symlinks"
+  task :additional_symlinks, :roles => :app do
+    run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+    run "ln -nfs #{shared_path}/config/mail.yml #{release_path}/config/mail.yml"
+  end
 end

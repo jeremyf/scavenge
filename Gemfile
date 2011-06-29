@@ -41,4 +41,6 @@ gem 'activeadmin', :git => 'git://github.com/webmat/active_admin', :ref => '6bc7
 
 group :development do
   gem 'capistrano'
+  gem 'ruby-debug'
+  gem 'require_relative'
 end
