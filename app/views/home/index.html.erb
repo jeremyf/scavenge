@@ -10,13 +10,13 @@
 </ul>
 
 <%- if current_team_member -%>
-  <h2>Remaining Questions</h2>
+  <h2>Remaining Items</h2>
   <div id="team_solutions">
     <table>
       <thead>
         <tr>
-          <th>Email #</th>
-          <th>Question</th>
+          <th>Subject</th>
+          <th>Item</th>
         </tr>
       </thead>
       <tbody>
@@ -41,6 +41,27 @@
       </tbody>
     </table>
   </div>
+<%- else -%>
+  <h2>Items</h2>
+  <div id="team_solutions">
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Item</th>
+        </tr>
+      </thead>
+      <tbody>
+      <%- Question.all.each do |question| -%>
+        <tr class="<%= cycle('odd','even') %>">
+          <td><%= question.email_subject %></td>
+          <td><%= question %></td>
+        </tr>
+      <%- end -%>
+      </tbody>
+    </table>
+  </div>
+
 <%- end -%>
 
 <div id="leader_board">

@@ -5,11 +5,7 @@ class Solution < ActiveRecord::Base
   has_and_belongs_to_many :purchased_clues, :join_table => 'clues_solutions', :class_name => 'Clue'
   mount_uploader :proposed_solution, ProposedSolutionUploader
 
-  delegate :possible_points, :to => :question
-
-  def email_subject
-    question[:id].to_s
-  end
+  delegate :email_subject, :possible_points, :to => :question
 
   def clues
     return @clues if @clues
