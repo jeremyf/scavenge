@@ -5,6 +5,9 @@ set :user, 'deploy'
 set :repository,  "git@github.com:jeremyf/scavenge.git"
 set :deploy_to,   "/var/www/apps/#{application}"
 set :scm, :git
+# default_run_options[:pty] = true
+
+set :use_sudo, false
 
 role :web, "app3.ndwebgroup.railsmachina.com" # Your HTTP server, Apache/etc
 role :app, "app3.ndwebgroup.railsmachina.com" # This may be the same as your `Web` server

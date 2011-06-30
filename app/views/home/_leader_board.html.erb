@@ -5,6 +5,7 @@
       <th>Score</th>
       <th>Possible</th>
       <th>Clues Purchased</th>
+      <th>Questions Answered</th>
     </tr>
   </thead>
   <tbody>
@@ -14,6 +15,7 @@
         <td><%= team.score.current %></td>
         <td><%= team.score.possible %></td>
         <td><%= team.score.clues_purchased %></td>
+        <td><%= team.solutions.without_state(:open).count %></td>
       </tr>
     <% end %>
   </tbody>
