@@ -6,11 +6,10 @@
     <%- else -%>
       <%= link_to "Sign In", new_team_member_session_path  %></li>
     <%- end -%>
-  <li>Remaining Questions</li>
-  <li>Leader Board</li>
 </ul>
 
 <%- if current_team_member -%>
+  <h2>Current Score</h2>
   <div id="team_solutions">
     <table>
       <thead>
@@ -33,7 +32,7 @@
                 <li>
                   <%= content_tag 'span', clue, :class => dom_class(clue) %>
                   <%- if clue.purchased? -%>
-                    <br><span class="clue_text"> <%= clue.text %></span>
+                    <br><span class="clue_text"> <%= clue.text %> (-<%= clue.point_cost %> pts)</span>
                   <%- else -%>
                     <%= link_to 'Purchase?', purchase_clue_path(clue), :method => :post, :confirm => "This will reduce the questions value by #{clue.point_cost}. Are you sure?" %>
                   <%- end -%>
@@ -49,5 +48,6 @@
 <%- end -%>
 
 <div id="leader_board">
+  <h2>Leader Board</h2>
   <%= render 'leader_board' %>
 </div>
