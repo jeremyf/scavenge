@@ -14,7 +14,13 @@ ActiveAdmin.register Solution do
           li clue, :class => dom_class(clue)
         end
     end
-    column :state
+    column :image do |solution|
+      if solution.solved?
+        img :src => solution.proposed_solution.url, :height => 64, :width => 64
+      else
+        '&nbsp;'.html_safe
+      end
+    end
     default_actions
   end
 
