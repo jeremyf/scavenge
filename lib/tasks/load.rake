@@ -3,6 +3,9 @@ task 'load_data' => [:environment] do
   AdminUser.create!(:email => 'jeremy.n.friesen@gmail.com', :password => 'password', :password_confirmation => 'password')
   ["Leahy", "Rockne", "Holtz"].each do |name|
     Team.create(:name => name).tap do |team|
+      if name == 'Leahy'
+        team.team_members.build(:email => "takeonrules@gmail.com", :password => 'password', :password_confirmation => 'password')
+      end
       team.team_members.build(:email => "#{team}@nd.edu", :password => 'password', :password_confirmation => 'password')
     end.save!
   end

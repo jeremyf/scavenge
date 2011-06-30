@@ -26,5 +26,6 @@ namespace :deploy do
   task :additional_symlinks, :roles => :app do
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
     run "ln -nfs #{shared_path}/config/mail.yml #{release_path}/config/mail.yml"
+    run "ln -nfs #{shared_path}/uploads #{release_path}/public/uploads"
   end
 end
