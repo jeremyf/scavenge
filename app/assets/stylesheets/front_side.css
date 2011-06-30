@@ -6,3 +6,6 @@ th, td {margin:0; padding:5px 8px 3px; border:none;}
 .ui-content .ui-listview {margin-bottom:0;}
 
 #leader_board {clear:both; margin:20px 0;}
+
+
+.even { background:#eee;}

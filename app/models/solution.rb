@@ -91,7 +91,7 @@ class Solution < ActiveRecord::Base
 
   state_machine :state, :initial => :open do
     event :solve do
-      transition :open => :pending
+      transition [:open, :pending] => :pending
     end
 
     event :accept do
